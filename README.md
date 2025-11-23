@@ -8,9 +8,11 @@ Before running the script, make sure you have the required packages installed on
 
 ```bash
 sudo apt update
+```
+
+```bash
 sudo apt install -y aircrack-ng hostapd dnsmasq psmisc
-
-
+```
 
 ⚠️ Important Note: Ensure that your system's date and time are accurately set. Incorrect time settings can cause issues during the execution of the tool.
 
@@ -24,34 +26,22 @@ Follow these steps to run the tool:
 
 Clone the repository:
 Clone the tool into your Kali Linux system using the following command:
-bash
 
 Line Wrapping
 
-Collapse
-Copy
-1
+```bash
 git clone https://github.com/Nexynt/Trap-AP.git
+```
 Enter the directory:
 Navigate into the tool's directory:
-bash
-
-Line Wrapping
-
-Collapse
-Copy
-1
+```bash
 cd Trap-AP
+```
 Run the script:
 Execute the main script with sudo privileges:
-bash
-
-Line Wrapping
-
-Collapse
-Copy
-1
+```bash
 sudo ./evil_twin_open.sh
+```
 Select your wireless interface:
 The script will display a list of your network interfaces. Select your wireless interface (it's usually named wlan0 or similar).
 If your wireless interface is not listed:
@@ -62,6 +52,7 @@ How It Works
 After you select a target, the tool creates a fake access point with the exact same name (SSID) as the target network.
 Any user who mistakenly connects to this fake Wi-Fi network will be automatically redirected to the index.html page you have provided.
 If the user is tricked into entering their password in the login field and clicking the submit button, their password will be immediately displayed on your terminal.
+
 Log File
 All captured credentials are saved in a file named captured_credentials.log inside the project directory. You can review this file later to see the captured information.
 
